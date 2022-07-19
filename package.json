@@ -1,0 +1,22 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedasherx/PortfolioSite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thedasherx/PortfolioSite/issues"
+  },
+  "homepage": "https://github.com/thedasherx/PortfolioSite#readme",
+  "dependencies": {
+    "socket.io": "^4.5.1"
+  }
+}
