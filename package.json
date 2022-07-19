@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/thedasherx/PortfolioSite#readme",
   "dependencies": {
+    "gatsby": "^4.19.0",
     "socket.io": "^4.5.1"
   }
 }
