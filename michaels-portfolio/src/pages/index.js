@@ -1,9 +1,9 @@
 import * as React from "react"
+import Navbar from "../components/Navbar"
 
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
@@ -129,7 +129,8 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
+      <title>Michael Webb's Portfolio</title>
+      <Navbar></Navbar>
       <h1 style={headingStyles}>
         Congratulations
         <br />
