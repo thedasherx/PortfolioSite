@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
 const NavItem = styled(Link)`
   text-decoration: none;
-  color: #111;
+  color: #f8f0e3;
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -19,13 +19,13 @@ const NavItem = styled(Link)`
     width: 0%;
     content: ".";
     color: transparent;
-    background: goldenrod;
+    background: #663399;
     height: 1px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
-    color: goldenrod;
+    color: #463750;
     ::after {
       width: 100%;
     }
@@ -36,7 +36,7 @@ const NavItem = styled(Link)`
     font-size: 1.5rem;
     z-index: 6;
   }
-`
+`;
 const NavbarLinks = () => {
   return (
     <>
@@ -45,7 +45,7 @@ const NavbarLinks = () => {
       <NavItem to="/">Projects</NavItem>
       <NavItem to="/404">Work Experience</NavItem>
     </>
-  )
-}
+  );
+};
 
-export default NavbarLinks
+export default NavbarLinks;
