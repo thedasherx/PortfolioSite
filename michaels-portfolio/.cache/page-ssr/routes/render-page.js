@@ -11274,6 +11274,17 @@ module.exports = require("path");
 
 /***/ }),
 
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!

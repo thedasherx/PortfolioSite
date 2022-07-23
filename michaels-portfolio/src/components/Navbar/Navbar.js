@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import NavbarLinks from "./NavbarLinks";
 import CodeIcon from "@mui/icons-material/Code";
-import Code from "@mui/icons-material/Code";
 
 const Navigation = styled.nav`
   height: 5vh;
   display: flex;
-  background-color: #353137;
+  background-color: #201e21;
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;
   border-bottom: 2px solid #353137;
-  margin: 0 auto;
   z-index: 2;
   align-self: center;
+  align-items: center;
 
   @media (max-width: 768px) {
     position: sticky;
@@ -30,7 +29,7 @@ const Toggle = styled.div`
   display: none;
   height: 100%;
   cursor: pointer;
-  padding: 0 10vw;
+  padding: 0 3vw;
 
   @media (max-width: 768px) {
     display: flex;
@@ -56,19 +55,20 @@ const Navbox = styled.div`
 `;
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: #f8f0e3;
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
   transform: ${(props) => (props.open ? "rotate(-45deg)" : "inherit")};
+  color: #f8f0e3;
 
   ::before,
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: #63605b;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -91,7 +91,7 @@ const Navbar = () => {
 
   return (
     <Navigation>
-      <Code />
+      <CodeIcon sx={{ color: "#f8f0e3", marginLeft: "0.25em" }} />
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}

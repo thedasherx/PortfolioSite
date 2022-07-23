@@ -1,7 +1,11 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 exports.__esModule = true;
 exports.headHandlerForSSR = headHandlerForSSR;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 const React = require(`react`);
 
@@ -82,19 +86,29 @@ function headHandlerForSSR({
 
     for (const node of headNodes) {
       const {
-        rawTagName,
-        attributes
+        rawTagName
       } = node;
-      const id = attributes.id;
+      const id = node.attributes.id;
 
       if (!VALID_NODE_NAMES.includes(rawTagName)) {
         warnForInvalidTags(rawTagName);
       } else {
-        var _node$childNodes$;
-
-        const element = createElement(rawTagName, { ...attributes,
+        let element;
+        const attributes = { ...node.attributes,
           "data-gatsby-head": true
-        }, (_node$childNodes$ = node.childNodes[0]) === null || _node$childNodes$ === void 0 ? void 0 : _node$childNodes$.textContent);
+        };
+
+        if (rawTagName === `script`) {
+          element = /*#__PURE__*/React.createElement("script", (0, _extends2.default)({}, attributes, {
+            dangerouslySetInnerHTML: {
+              __html: node.text
+            }
+          }));
+        } else {
+          var _node$childNodes$;
+
+          element = /*#__PURE__*/React.createElement(node.rawTagName, attributes, (_node$childNodes$ = node.childNodes[0]) === null || _node$childNodes$ === void 0 ? void 0 : _node$childNodes$.textContent);
+        }
 
         if (id) {
           if (!seenIds.has(id)) {
